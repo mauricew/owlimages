@@ -3,3 +3,10 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+  form(method='post',action='/upload',enctype='multipart/form-data')
+    input(type='file',name='upload')
+    br
+    button.btn.btn-lg.btn-primary(type="submit")
+      span.glyphicon.glyphicon-upload
+      |  Upload
